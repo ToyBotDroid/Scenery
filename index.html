@@ -1,0 +1,201 @@
+
+<!--
+
+This code is also submitted for the "Sea vs Mountain" Contest.
+
+Here's the Contest link:
+https://code.sololearn.com/W0ws0MPnF9GY/?ref=app
+
+U can also find the code by the organizer in the comments"
+
+-->
+
+
+
+
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            a*{
+    box-sizing: border-box; 
+    padding: 0;
+    margin:0;
+  }
+html{ scroll-behavior: smooth;
+background-color: blue;
+/* overflow: hidden; */
+} 
+
+body{max-width: 900px;
+margin: auto}
+
+
+nav{
+   position: sticky ; 
+   top:0;
+   z-index: 5;}
+
+nav ol{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(10, 25, 112);
+  padding: 10px;
+}
+
+li{
+ list-style: none;
+ text-decoration: none;
+ color: honeydew;
+}
+a:hover{
+  transform:scale(1.3,1.3);
+}
+#surface-view{
+  background: skyblue;
+background:radial-gradient(circle, rgba(246,255,90,1) 16%, rgba(240,255,203,1) 16%, rgba(116,219,219,1) 80%, rgb(223, 242, 245) 100%);
+
+
+  height: 60vh;
+}
+
+/* .sun{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(247, 10, 121), rgb(219, 71, 103), rgb(238, 255, 0));
+       position: absolute;
+   transform: translate(50px,90px); 
+  box-shadow: 2px 2px 20px 15px yellow;
+  place-items: center;} */
+
+header .header{
+  background-color: #000;
+} 
+.back-mountains{
+  background: linear-gradient(0deg, rgba(122,226,27,1) 0%, rgba(38,118,17,1) 73%, rgba(47,91,9,1) 100%);
+  height: 100%;
+  clip-path: polygon(56% 45%, 76% 86%, 88% 60%, 100% 30%, 100% 100%, 0% 100%, 20% 73%, 34% 93%);
+  z-index: 2;
+  transform: translate(0,-30px);
+}
+.front-mountains{
+  background: linear-gradient(0deg, rgba(122,226,27,1) 0%, rgba(43,124,18,1) 18%, rgba(38,117,17,1) 36%, rgba(35,114,17,1) 44%, rgba(34,112,17,1) 47%, rgba(21,95,16,1) 50%, rgba(21,95,16,1) 51%);
+  clip-path: polygon(34% 83%, 50% 59%, 76% 100%, 0 100%, 0 42%);
+  height: 100%;
+  transform: translate(0,-160%);
+}
+.water{
+  background:linear-gradient(0deg, rgba(36,63,229,1) 31%, rgba(70,136,214,1) 100%);;
+  height: 78%;
+  transform: translate(0,-30px);
+}
+#underwater{
+ transform: translate(0,40vh);
+ background: linear-gradient(to top, #2305c7, #00c4ff);
+ height: 100vh;
+}
+#underwater div{
+    font-size: 7vmin;
+    padding-top:15%;
+    
+}
+
+
+/* Animation Part*/
+
+
+p, pre, span{ display: inline-block;}
+
+.fish1{
+  animation: left 10s linear infinite;
+}
+
+.fish2, .whale{
+  animation: left 14s linear infinite;
+}
+
+.crab{
+  transform: translateX(10px);
+  animation: up-down 10s ease infinite;
+}
+
+.shrimp,.snail{
+  transform: translate(-10px,-100px);
+  animation: up-down 10s ease infinite;
+}
+
+.octopus{
+   transform: translate(-600px ,0);
+  animation:
+            up-down 10s ease infinite;
+}
+
+.squid{ animation: right 3s ease-in-out infinite;} 
+
+
+@keyframes left{
+  from {transform: translateX(10px)}
+  to {transform: translateX(-400px) }
+}
+
+@keyframes up-down{
+    50%{ transform:translate(100px,80px);}
+}
+ 
+@keyframes right{
+  from{transform: translateX(-70px)}
+  to{ transform: translateX(280px)}
+} 
+
+
+
+        </style>
+    </head>
+
+        
+<body  id="surface"  >     
+
+  <nav >
+    <ol>
+      <a href="#surface"><li>Surface View</li></a>
+      <a href="#underwater"><li>Underwater View</li></a>
+    </ol>
+  </nav>
+  
+  <main id="surface-view">
+    <!-- <section class="sun"></section> -->
+    <headers class="header">
+      <section class="back-mountains" ></section>
+      <section class="water"></section>
+      <section class="front-mountains"></section>
+    </headers>
+  </main>
+
+  <main id="underwater">
+     <div>  
+      <span class="crab" >🦀</span> 
+      <pre class="fish2">
+         🐡🐡🐡🐡
+      </pre>
+      <pre class="fish1" >    
+         🐠
+    🐠  🐠  🐠
+         🐠  
+      </pre>
+      <p class="octopus"> 🐙</p>
+      <span class="snail"></span> 🐚
+      <span class="whale">🐋</span> 
+      <span class="shrimp"> 🦐</span>
+      <span class="squid">🦑</span>
+      
+    </div>
+
+
+  </main>
+
+    </body>
+</html>
